@@ -2,4 +2,11 @@
     <string name="app_name">Swipe Quiz</string>
     <string name="title_Text">Quiz instructions</string>
     <string name="explain_text">Swipe right for true, swipe left for false.</string>
+    <string-array name="questions_array">
+        <item>Eevee has 9 evolutions</item>
+        <item>The first Pokémon made is Bulbasaur</item>
+        <item>Rowlet's hidden ability is Long Reach</item>
+        <item>Meowth has 3 forms</item>
+        <item>Pokémon is just for little kids…</item>
+    </string-array>
 </resources>

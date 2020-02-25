@@ -2,5 +2,7 @@ package com.example.swipequiz
 
 data class Question(
     var theQuestion: String,
-    var answer: Boolean
-)
+    var answerIndex: Int
+) {
+    public var answer: Boolean = false
+}
