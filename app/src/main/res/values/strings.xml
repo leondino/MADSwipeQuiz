@@ -2,6 +2,7 @@
     <string name="app_name">Swipe Quiz</string>
     <string name="title_Text">Quiz instructions</string>
     <string name="explain_text">Swipe right for true, swipe left for false.</string>
+    <string name="wrong_answer">Your answer was incorrect!</string>
     <string-array name="questions_array">
         <item>Eevee has 9 evolutions</item>
         <item>The first Pokémon made is Bulbasaur</item>
