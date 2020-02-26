@@ -32,7 +32,7 @@ class QuestionAdapter(private val questions: List<Question>, private val mainCon
         fun bind(question: Question){
             itemView.questionText.text = question.theQuestion
             itemView.setOnClickListener {
-                Toast.makeText(mainContext, question.answer.toString(), Toast.LENGTH_SHORT).show()
+                Toast.makeText(mainContext, mainContext.getString(R.string.click_question_text, question.answer), Toast.LENGTH_SHORT).show()
             }
         }
     }
