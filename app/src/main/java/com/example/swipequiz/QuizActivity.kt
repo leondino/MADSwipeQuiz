@@ -11,7 +11,7 @@ class QuizActivity : AppCompatActivity() {
 
     private var questions = arrayListOf<Question>()
     private var questionAdapter = QuestionAdapter(questions)
-    private var questionArray = resources.getStringArray(R.array.questions_array)
+    private var questionArray = arrayOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +24,7 @@ class QuizActivity : AppCompatActivity() {
         rvQuiz.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         rvQuiz.adapter = questionAdapter
         rvQuiz.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+        questionArray = resources.getStringArray(R.array.questions_array)
 
         for (iQuestion in questionArray.indices){
             questions.add(Question(questionArray[iQuestion],
@@ -31,5 +32,7 @@ class QuizActivity : AppCompatActivity() {
 
             questions[iQuestion].answer = questions[iQuestion].answerIndex == 1
         }
+
+        questionAdapter.notifyDataSetChanged()
     }
 }
