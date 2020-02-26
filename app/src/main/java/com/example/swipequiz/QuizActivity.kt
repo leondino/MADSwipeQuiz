@@ -60,7 +60,7 @@ class QuizActivity : AppCompatActivity() {
                 if(questions[position].answer == givenAnswer)
                     questions.removeAt(position)
                 else
-                    Snackbar.make(window.decorView.findViewById(android.R.id.content), resources.getString(R.string.wrong_answer), Snackbar.LENGTH_SHORT) //Doesn't work for some reason?
+                    Snackbar.make(rvQuiz, resources.getString(R.string.wrong_answer), Snackbar.LENGTH_SHORT).show()
 
                 questionAdapter.notifyDataSetChanged()
             }
