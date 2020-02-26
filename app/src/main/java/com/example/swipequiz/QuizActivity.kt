@@ -3,6 +3,7 @@ package com.example.swipequiz
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_quiz.*
@@ -34,5 +35,10 @@ class QuizActivity : AppCompatActivity() {
         }
 
         questionAdapter.notifyDataSetChanged()
+    }
+
+    private fun creatItemTouchHelper() : ItemTouchHelper{
+        val callback = object : ItemTouchHelper.SimpleCallback()
+        return ItemTouchHelper(callback)
     }
 }
