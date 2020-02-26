@@ -1,5 +1,7 @@
 package com.example.swipequiz
 
+import android.app.Activity
+import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -58,7 +60,7 @@ class QuizActivity : AppCompatActivity() {
                 if(questions[position].answer == givenAnswer)
                     questions.removeAt(position)
                 else
-                    Snackbar.make(rvQuiz, resources.getString(R.string.wrong_answer), Snackbar.LENGTH_SHORT) //Doesn't work for some reason?
+                    Snackbar.make(window.decorView.findViewById(android.R.id.content), resources.getString(R.string.wrong_answer), Snackbar.LENGTH_SHORT) //Doesn't work for some reason?
 
                 questionAdapter.notifyDataSetChanged()
             }
